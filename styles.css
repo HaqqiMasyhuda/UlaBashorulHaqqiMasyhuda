@@ -1,0 +1,420 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Menata body */
+body {
+  background-color: #000000; /* Latar belakang hitam */
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/* Menata navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  position: fixed;
+  top: px;
+  left: 0;
+  right: ;
+  z-index: 10;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Latar belakang transparan */
+}
+
+/* Menata logo */
+.logo {
+  width: 100px; /* Sesuaikan ukuran logo */
+  height: auto;
+  margin-right: 20px; /* Jarak antara logo dan menu */
+}
+
+/* Menata menu navigasi */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Menata elemen anchor dalam navbar */
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px; /* Tambahkan jarak di bawah teks untuk garis */
+  transition: color 0.3s ease;
+}
+
+/* Efek hover dengan garis animasi */
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease; /* Animasi garis */
+}
+
+/* Efek untuk Home ketika berada di bagian Home */
+.nav-menu a.home-link.active {
+  color: blue; /* Warna teks berubah menjadi biru ketika Home aktif */
+}
+
+.nav-menu a.home-link.active::after {
+  background-color: blue; /* Garis menjadi biru pada Home */
+  width: 100%; /* Perluas garis menjadi penuh */
+}
+
+/* Efek untuk About ketika berada di bagian About */
+.nav-menu a.about-link.active {
+  color: blue; /* Warna teks berubah menjadi biru ketika About aktif */
+}
+
+.nav-menu a.about-link.active::after {
+  background-color: blue; /* Garis menjadi biru pada About */
+  width: 100%; /* Perluas garis menjadi penuh */
+}
+
+/* Efek untuk Services ketika berada di bagian Services */
+.nav-menu a.services-link.active {
+  color: blue; /* Warna teks berubah menjadi biru ketika Services aktif */
+}
+
+.nav-menu a.services-link.active::after {
+  background-color: blue; /* Garis menjadi biru pada Services */
+  width: 100%; /* Perluas garis menjadi penuh */
+}
+
+/* Efek untuk Services ketika berada di bagian Services */
+.nav-menu a.profile-link.active {
+  color: blue; /* Warna teks berubah menjadi biru ketika Services aktif */
+}
+
+.nav-menu a.profile-link.active::after {
+  background-color: blue; /* Garis menjadi biru pada Services */
+  width: 100%; /* Perluas garis menjadi penuh */
+}
+
+/* Efek untuk Contact ketika berada di bagian Contact */
+.nav-menu a.social-link.active {
+  color: blue; /* Warna teks berubah menjadi biru ketika Contact aktif */
+}
+
+.nav-menu a.social-link.active::after {
+  background-color: blue; /* Garis menjadi biru pada Contact */
+  width: 100%; /* Perluas garis menjadi penuh */
+}
+
+/* Efek hover pada menu navigasi */
+.nav-menu a:hover {
+  color: #fff; /* Ganti warna teks saat hover */
+}
+
+.nav-menu a:hover::after {
+  width: 100%; /* Perluas garis saat hover */
+}
+
+/* Mengatur posisi Home Section */
+#home {
+  height: 100vh; /* Agar bagian home memakan satu layar penuh */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Pastikan container memakan tinggi penuh */
+}
+
+/* Menu About */
+#about {
+  padding: 50px 20px;
+  background-color: #111;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.about-box {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  width: 45%;
+  border-radius: 8px;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: grow 1s forwards; /* Animasi untuk mengembang */
+  
+}
+
+.about-box h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.about-box p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.center {
+  justify-content: center;
+}
+
+.center .about-box {
+  width: 50%; /* Lebar box di tengah lebih besar */
+  margin-top: 40px; /* Jarak antara bagian atas dan bagian kesimpulan */
+}
+
+/* Animasi mengembang */
+@keyframes grow {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Section Services */
+#services {
+  padding: 50px 20px;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.services-container {
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: grow 1s forwards; /* Animasi untuk mengembang */
+}
+
+.services-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.services-container p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Tombol Download */
+.download-btn {
+  display: inline-block;
+  background-color: #ff00ee;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #ff33ff;
+  transform: scale(1.1);
+}
+
+/* Animasi mengembang */
+@keyframes grow {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Contact container styling */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background-color: #1c1c1c; /* Dark background for the container */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Header Section */
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h1 {
+  font-size: 36px;
+  color: #ffffff; /* White text */
+}
+
+.contact-header p {
+  font-size: 18px;
+  color: #bbb; /* Lighter text */
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.profile-picture {
+  margin-right: 30px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ffffff; /* White text */
+}
+
+.profile-info p {
+  font-size: 18px;
+  color: #bbb; /* Lighter text */
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  background-color: #007bff; /* Blue color for buttons */
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+/* Social Links Section */
+.social-links {
+  text-align: center;
+}
+
+.social-links h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff; /* White text */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icon {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #333; /* Dark background for icons */
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #007bff; /* Blue on hover */
+  transform: scale(1.1);
+}
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #888; /* Lighter gray text */
+}
+
+.footer p {
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-picture {
+    margin-bottom: 20px;
+  }
+}
+
+/* Gaya teks dengan outline glow */
+.glow-outline {
+  font-family: 'Oswald', sans-serif;
+  font-size: 180px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: transparent; /* Tidak ada warna di isi teks */
+  position: relative;
+  -webkit-text-stroke: 2px #555; /* Outline gelap sebagai dasar */
+  overflow: hidden; /* Sembunyikan bagian luar */
+}
+
+/* Lapisan cahaya pada outline */
+.glow-outline::before {
+  content: "N-nBodar";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: transparent;
+  -webkit-text-stroke: 4px #ff00ee; /* Outline bercahaya putih */
+  filter: blur(1px); /* Tambahkan sedikit blur untuk efek cahaya */
+  clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%); /* Area cahaya awal */
+  animation: outline-glow 3s linear infinite; /* Animasi cahaya bergerak */
+}
+
+/* Animasi cahaya mengikuti outline */
+@keyframes outline-glow {
+  0% {
+    clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 110% 0, 110% 100%, 100% 100%);
+  }
+}
+
+/* Efek smooth scroll untuk navigasi */
+html {
+  scroll-behavior: smooth;
+}
